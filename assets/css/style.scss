@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-size: 16px;
+    background-color: #121212;
+    font-family: 'Karla', sans-serif;
+
+    .to-do-list {
+        width: 100%;
+        max-width: 600px;
+
+
+        h1 {
+            border-top-right-radius: 4px;
+            border-top-left-radius: 4px;
+            font-weight: 500;
+            padding: 15px;
+            background-color: #de3f53;
+            color: #fff;
+            font-size: 1.3em;
+        }
+
+        .wrapper-list ul.list {
+            list-style: none;
+    
+            li {
+                position: relative;
+                font-size: 1.2em;
+                font-weight: 500;
+                background-color: #262e4c;
+                border-bottom: 1px solid #1c2340;
+                color: #b1b2c9;
+                display: flex;
+                align-items: center;
+                padding: 20px;
+                transition: 700ms ease;
+
+                &.removed {
+                    animation: collapseItem 300ms ease;
+                }
+
+                &.hidden {
+                    display: none;
+                } 
+    
+                &:hover {
+                    background-color: #18203b;
+                }
+    
+                &:hover button.remove {
+                    display: block;
+                }
+
+                div.check {
+                    position: relative;
+                    background-color: #404a6e;
+                    border-radius: 50%;
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 20px;
+                    transition: background-color 200ms ease;
+    
+                    &:hover {
+                        cursor: pointer;
+                        background-color: #171d37;
+                    }
+                }
+
+                &.done .check::after{
+                    position: absolute;
+                    top: 4.5px;
+                    left: 4.5px;
+                    display: block;
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    background-color: green;
+                    border-radius: 50%;
+
+                }
+
+                &.done .task {
+                    text-decoration: line-through;
+                }
+    
+                button.remove {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    border: none;
+                    outline: none;
+                    background-color: #de3f53;
+                    color: white;
+                    font-weight: bold;
+                    border-radius: 100%;
+                    width: 20px;
+                    height: 20px;
+                    display: none;
+                    transition: 00ms ease;
+                    
+                    &:hover {
+                        cursor: pointer;
+                        background-color: #773139;;
+                    }
+    
+                    &::after {
+                        content: 'x';
+                        color: white;
+                        display: block;
+                    }
+                }
+            }
+        }
+        
+        div.enter-task {
+            background-color: #171d37;
+
+            #input-task {
+                background-color: #171d37;
+                border: none;
+                outline: none;
+                width: 100%;
+                padding: 20px;
+                font-size: 1em;
+                color: #fff;
+
+                &::placeholder {
+                    color: #afafaf;
+                }
+            }
+        }
+
+
+    }
+}
+
+@keyframes collapseItem {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    100% {
+        transform: rotateX(-90deg);
+    }
+}
