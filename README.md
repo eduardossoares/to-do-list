@@ -1,6 +1,6 @@
 # Lista de Tarefas
 
-Este é um projeto simples de uma lista de tarefas (To-Do List) desenvolvido utilizando HTML, CSS e JavaScript. A aplicação permite aos usuários adicionar, remover e marcar tarefas como concluídas. Em breve será atualizada para que suas tarefas sejam salvas no navegador e reparecerem ao recarregar o navegador.
+Este é um projeto simples de uma lista de tarefas (To-Do List) desenvolvida pelo curso de FullStack JavaScript do professor Thiago Medeiros. A aplicação permite aos usuários adicionar, remover e marcar tarefas como concluídas.
 
 ## Layout:
 ![image](https://github.com/eduardossoares/to-do-list/assets/128731192/1171303e-0d0c-4e7e-9a54-6e328d87ee60)
@@ -35,7 +35,7 @@ script.js: O script JavaScript que manipula as interações do usuário, adicion
 
 - JavaScript
 - HTML
-- SCSS
+- SASS/SCSS
 
 ## Autor
 
