@@ -31,7 +31,7 @@ script.js: O script JavaScript que manipula as interações do usuário, adicion
 2. Abra o arquivo index.html em um navegador web.
 3. Comece a adicionar, marcar e remover tarefas!
 
-## Linguagens Utilizadas
+## Tecnologias Utilizadas
 
 - JavaScript
 - HTML
